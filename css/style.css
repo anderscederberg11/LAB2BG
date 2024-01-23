@@ -1,0 +1,86 @@
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div{
+  border: 5px solid blue;
+}
+.sectionOne{
+  width:60rem;
+  height:20rem;
+  border: 5px solid red;
+}
+.sectionTwo, .sectionThree, .sectionFour, .sectionFive, .sectionSix, .sectionSeven{
+  display:grid;
+  grid-gap:0.25rem;
+  width:50rem;
+  padding:1rem;
+  margin:0.25rem;
+  border: 5px solid red;
+}
+.headerSectionThree, .headerSectionFour, .headerSectionFive, .headerSectionSix{
+  border: 5px solid green;
+}
+
+.sectionThree{
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.headerSectionThree{
+  grid-column: span 4;
+}
+
+.sectionFour{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.headerSectionFour{
+  grid-column: span 3;
+}
+
+.sectionFive{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.headerSectionFive{
+  grid-column: span 3;
+}
+
+.sectionSix{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.headerSectionSix{
+  grid-column: span 2;
+}
+
+.sectionSeven{
+  grid-template-columns: repeat(5, 1fr);
+}
+
+footer{
+  width:100rem;
+  background-color: black;
+
+}
+
+.sectionFooter{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap:0.25rem;
+  width:50rem;
+  padding:1rem;
+  margin: 0 auto;
+}
+
+.footerInfo{
+  grid-column: span 4;
+  border: 5px solid green;
+}
