@@ -8,6 +8,25 @@ div{
   border: 5px solid blue;
 }
 
+.headerContainer{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:0.25rem;
+  width:50rem;
+  padding:1rem;
+  margin:0.25rem;
+  border: 5px solid red;
+  background-color: lightgrey;
+}
+
+.headerTitleContainer{
+  border: 5px solid green;
+}
+
+.headerImageContainer{
+  grid-column: 2/4;
+}
+
 .sectionOne{
   width:60rem;
   height:20rem;
@@ -66,9 +85,8 @@ div{
 }
 
 footer{
-  width:100rem;
+  width:100%;
   background-color: black;
-
 }
 
 .sectionFooter{
@@ -79,8 +97,9 @@ footer{
   width:50rem;
   padding:1rem;
   margin: 0 auto;
+  border: 5px solid red;
 }
-
+  
 .footerInfo{
   grid-column: span 4;
   border: 5px solid green;
