@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.card {
+.card, .card-special {
   border: 5px solid blue;
 }
 
@@ -29,7 +29,7 @@
   background-color: lightgrey;
   width:100%;
   border:none;
-  margin:0.25rem;
+  margin:0.25em;
 }
 
 .sectionOneList{
@@ -37,29 +37,29 @@
 }
 
 .sectionOneImage{
-  width:60rem;
-  height:20rem;
+  width:60em;
+  height:20em;
   border: 5px solid red;
 }
 
 .headerContainer, .sectionTwo, .sectionThree, .sectionFour, .sectionFive, .sectionSix, .sectionSeven, .sectionFooter{
   display:grid;
-  width:50rem;
-  grid-gap:0.25rem;
-  padding:1rem;
-  margin:0.25rem;
+  width:50em;
+  grid-gap:0.25em;
+  padding:1em;
+  margin:0.25em;
   border: 5px solid red;
 }
 .headerSectionThree, .headerSectionFour, .headerSectionFive, .headerSectionSix, .footerInfo{
   border: 5px solid green;
 }
 
-.sectionThree{
+.sectionThree, .sectionFooter{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 
-.headerSectionThree{
+.headerSectionThree, .footerInfo{
   grid-column: span 4;
 }
 
@@ -104,15 +104,39 @@
 }
 
 .sectionFooter{
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  
+
 }
   
 .footerInfo{
-  grid-column: span 4;
+
 }
 
 .footerInfoCard{
   border: 5px solid blue;
 }
+
+@media screen and (max-width: 40em) { 
+  .sectionThree, .sectionFour, .sectionFooter, .sectionFive{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .headerSectionThree, .footerInfo, .headerSectionFour, .sectionFour .card-special, .headerSectionFive {
+    grid-column: span 2;
+  }
+
+  .sectionFive{
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .sectionSix{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .headerSectionSix{
+    grid-column: span 1;
+  }
+
+}
+
