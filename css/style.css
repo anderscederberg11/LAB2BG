@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-div{
+.card {
   border: 5px solid blue;
 }
 
@@ -19,6 +19,7 @@ div{
 
 .headerImageContainer{
   grid-column: 2/4;
+  border: 5px solid blue;
 }
 
 .sectionOne{
@@ -28,6 +29,7 @@ div{
   background-color: lightgrey;
   width:100%;
   border:none;
+  margin:0.25rem;
 }
 
 .sectionOneList{
@@ -35,7 +37,6 @@ div{
 }
 
 .sectionOneImage{
-  justify-content: center;
   width:60rem;
   height:20rem;
   border: 5px solid red;
@@ -91,6 +92,7 @@ div{
 
 .sectionSeven{
   grid-template-columns: repeat(5, 1fr);
+  height:31.51px; /*REMOVE*/
 }
 
 .footerContainer{
@@ -104,8 +106,13 @@ div{
 .sectionFooter{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  
 }
   
 .footerInfo{
   grid-column: span 4;
+}
+
+.footerInfoCard{
+  border: 5px solid blue;
 }
