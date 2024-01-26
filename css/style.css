@@ -22,10 +22,25 @@ div{
 }
 
 .sectionOne{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  width:100%;
+  border:none;
+}
+
+.sectionOneList{
+
+}
+
+.sectionOneImage{
+  justify-content: center;
   width:60rem;
   height:20rem;
   border: 5px solid red;
 }
+
 .headerContainer, .sectionTwo, .sectionThree, .sectionFour, .sectionFive, .sectionSix, .sectionSeven, .sectionFooter{
   display:grid;
   width:50rem;
