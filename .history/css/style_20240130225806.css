@@ -37,14 +37,14 @@
 }
 
 .sectionOneImage{
-  width:70%;
-  height:30vw;
+  width:60em;
+  height:20em;
   border: 5px solid red;
 }
 
 .headerContainer, .sectionTwo, .sectionThree, .sectionFour, .sectionFive, .sectionSix, .sectionSeven, .sectionFooter{
   display:grid;
-  width:60%;
+  width:80vh;
   grid-gap:0.25em;
   padding:1em;
   margin:0.25em;
