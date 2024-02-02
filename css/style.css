@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .card, .card-special {
   border: 5px solid blue;
 }
@@ -11,15 +10,68 @@
 .headerContainer{
   grid-template-columns: repeat(3, 1fr);
   background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerTitleContainer{
-  border: 5px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitleContainer, .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.headerTitleContainer, .logo {
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  margin-left: 1rem;
 }
 
 .headerImageContainer{
-  grid-column: 2/4;
   border: 5px solid blue;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12.5rem;
+}
+
+.boxGreen {
+  width: 6.5rem;
+  height: 6rem;
+  background-color: #25C389;
+}
+
+.boxYellow {
+  width: 6.5rem;
+  height: 6rem;
+  background-color: #FFB901;
+}
+
+.boxRed {
+  width: 6.5rem;
+  height: 6rem;
+  background-color: #DE6262;
+}
+
+.boxBlue {
+  width: 6.5rem;
+  height: 6rem;
+  background-color: #1691BD;
+}
+
+.boxNavy {
+  width: 6.5rem;
+  height: 6rem;
+  background-color: #166BA2;
 }
 
 .sectionOne{
@@ -40,6 +92,15 @@
   width:70%;
   height:30vw;
   border: 5px solid red;
+  box-sizing: content-box;
+}
+.sectionOneImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sectionTwo, .title {
+  text-align: center;
 }
 
 .headerContainer, .sectionTwo, .sectionThree, .sectionFour, .sectionFive, .sectionSix, .sectionSeven, .sectionFooter{
@@ -52,6 +113,32 @@
 }
 .headerSectionThree, .headerSectionFour, .headerSectionFive, .headerSectionSix, .footerInfo{
   border: 5px solid green;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardOne {
+  border: 2px solid #FFB901;
+  height: 5rem;
+  width: 5rem;
+}
+
+.cardTwo {
+  border: 2px solid #25C389;
+  height: 5rem;
+  width: 5rem;
+}
+
+.cardThree {
+  border: 2px solid #DE6262;
+  height: 5rem;
+  width: 5rem;
+}
+
+.cardFour {
+  border: 2px solid #1691BD;
+  height: 5rem;
+  width: 5rem;
 }
 
 .sectionThree, .sectionFooter{
