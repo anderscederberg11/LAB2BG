@@ -93,7 +93,7 @@
 
 }
 
-.footerInfoCard-1, .footerInfoCard-2, .footerInfoCard-3, .footerInfoCard-4{
+.footerInfoCard{
   border: 5px solid blue;
 }
 
@@ -101,9 +101,6 @@
 @media screen and (max-width: 39.9375em) {
   .sectionOne, .sectionSix, .sectionSeven{
     display: none;
-  }
-  .footerInfoCard-2, .footerInfoCard-4{
-    display:none;
   }
 }
 
@@ -117,10 +114,6 @@
   }
   .sectionSix, .sectionSeven{
     display: grid;
-  }
-  .sectionSeven{
-    grid-template-columns: repeat(5, 1fr);
-    height:31.51px; /*REMOVE*/
   }
 }
 
@@ -186,7 +179,11 @@
   .headerSectionSix{
     grid-column: span 2;
   }
-
+  
+  .sectionSeven{
+    grid-template-columns: repeat(5, 1fr);
+    height:31.51px; /*REMOVE*/
+  }
 }
 
 /* Large only */

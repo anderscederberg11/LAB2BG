@@ -102,7 +102,7 @@
   .sectionOne, .sectionSix, .sectionSeven{
     display: none;
   }
-  .footerInfoCard-2, .footerInfoCard-4{
+  .footerInfoCard-2,  .footerInfoCard-4{
     display:none;
   }
 }

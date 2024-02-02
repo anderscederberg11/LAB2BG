@@ -93,7 +93,7 @@
 
 }
 
-.footerInfoCard-1, .footerInfoCard-2, .footerInfoCard-3, .footerInfoCard-4{
+.footerInfoCard{
   border: 5px solid blue;
 }
 
@@ -102,9 +102,6 @@
   .sectionOne, .sectionSix, .sectionSeven{
     display: none;
   }
-  .footerInfoCard-2, .footerInfoCard-4{
-    display:none;
-  }
 }
 
 /* Medium and up */
@@ -112,16 +109,29 @@
   .card-superspecial{
     display:none;
   }
+  
   .sectionOne{
     display:flex;
   }
+
   .sectionSix, .sectionSeven{
     display: grid;
   }
+
   .sectionSeven{
     grid-template-columns: repeat(5, 1fr);
     height:31.51px; /*REMOVE*/
   }
+  
+  .sectionSix{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .headerSectionSix{
+    grid-column: span 2;
+  }
+
 }
 
 /* Medium only */
@@ -177,16 +187,6 @@
   .headerSectionFive{
     grid-column: span 3;
   }
-  
-  .sectionSix{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  
-  .headerSectionSix{
-    grid-column: span 2;
-  }
-
 }
 
 /* Large only */

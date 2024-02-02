@@ -1,0 +1,126 @@
+.displayContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card, .card-special {
+  border: 5px solid blue;
+}
+
+.headerContainer{
+  grid-template-columns: repeat(3, 1fr);
+  background-color: lightgrey;
+}
+
+.headerTitleContainer{
+  border: 5px solid green;
+}
+
+.headerImageContainer{
+  grid-column: 2/4;
+  border: 5px solid blue;
+}
+
+.sectionOne{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  width:100%;
+  border:none;
+  margin:0.25vh;
+}
+
+.sectionOneImage{
+  width:70%;
+  height:30vw;
+  border: 5px solid red;
+}
+
+.sectionContainer {
+  display: grid;
+  width: 60%;
+  grid-gap: 0.25em;
+  padding: 1em;
+  margin: 0.25em;
+  border: 5px solid red;
+}
+
+.headerSection, .footerInfo{
+  border: 5px solid green;
+}
+
+.headerSection {
+  grid-column: span 3;
+}
+
+.sectionContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.sectionContent:nth-last-child(-n+2) {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.sectionSixContent {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sectionSevenContent {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footerContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  background-color: black;
+}
+
+.footerInfoCard{
+  border: 5px solid blue;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .sectionOne, .sectionSix, .sectionSeven {
+    display: none;
+  }
+  .sectionContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .headerSection {
+    grid-column: span 1;
+  }
+  .sectionContent {
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .sectionContent:nth-last-child(-n+2) {
+    grid-template-rows: repeat(7, 1fr);
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .sectionContent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .headerSection, .footerInfo, .card-special {
+    grid-column: span 2;
+  }
+
+  .sectionContent:nth-last-child(-n+2) {
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .sectionSixContent {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
