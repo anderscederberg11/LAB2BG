@@ -5,6 +5,7 @@
   --calmyellow: #f8ba0d;
   --calmred: #de6262;
   --hrblue: #1bade6;
+  --calmdarkblue: #166ba2;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -21,7 +22,6 @@ h4{
 }
 
 p{
-  font-size: 0.7vw;
   line-height: 1.2vw;
   color: white;
 }
@@ -208,6 +208,108 @@ h6{
   grid-row: 2/3;
 }
 
+.footerInfoCard-3{
+  grid-row: auto auto auto;
+  grid-column: 30% 70%;
+}
+
+.footerInfoCard-3 hr{
+  border: 1px solid var(--calmred);
+}
+
+.footerInfoCard-3 div{
+  grid-column: span 2;
+}
+
+.footerInfoCard-3 img{
+  grid-column:1/2;
+}
+
+.twittericonone{
+  margin-top: 1vw;
+  margin-right: 1vw;
+  width: 2.5vw;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.twittericontwo{
+  margin-top: 1vw;
+  margin-right: 1vw;
+  width: 2.5vw;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.paraStylef3-1{
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+
+.paraStylef3-2{
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.footerInfoCard-4{
+  grid-row: auto auto auto;
+}
+
+.footerInfoCard-4 hr{
+  border: 1px solid var(--hrblue);
+}
+
+.footerInfoCard-4 p{
+  grid-row: 2/3;
+}
+
+.searchareabar{
+  grid-row: 3/4;
+  background-color: var(--calmred);
+  height:2.5vw;
+  position:relative;
+}
+
+.searchareabar div{
+  color: white;
+  position:absolute;
+  font-weight: bold;
+  font-size: 0.7vw;
+  left:1vw;
+  top:0.85vw;
+}
+
+.searchareabar img{
+  height:100%;
+  position: absolute;
+  right: 0;
+}
+
+.colorbar{
+  grid-column: auto auto auto auto auto;
+  height:4vw;
+}
+
+.colorbargreen{
+  background-color: var(--calmgreen);
+}
+.colorbaryellow{
+  background-color: var(--calmyellow);
+}
+.colorbarred{
+  background-color: var(--calmred);
+}
+.colorbarblue{
+  background-color: var(--calmblue);
+}
+.colorbardarkblue{
+  background-color: var(--calmdarkblue);
+}
+.colorbargreen, .colorbaryellow, .colorbarred, .colorbarblue, .colorbardarkblue{
+
+}
+
 /* Small only */
 @media screen and (max-width: 39.9375em) {
   .sectionOne, .sectionSix, .sectionSeven{
@@ -232,6 +334,18 @@ h6{
   .sectionSeven{
     grid-template-columns: repeat(5, 1fr);
     height:31.51px; /*REMOVE*/
+  }
+  .footerInfoCard-2{
+    gap:1vw;  
+  }
+
+  .footerInfoCard-1 img{
+    grid-row:3/4;
+    width:15vw;
+  }
+
+  p{
+    font-size: 0.62vw;
   }
 }
 
