@@ -5,6 +5,18 @@
 }
 .card, .card-special {
   border: 5px solid blue;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+.sectionFour img {
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
 }
 
 .headerContainer{
@@ -13,13 +25,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  margin-top: 0%;
 }
 
 .headerTitleContainer{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 3vw;
+  
 }
 
 .headerTitleContainer, .title {
@@ -32,48 +47,51 @@
   width: 1rem;
   display: flex;
   margin-left: 1rem;
+  margin-top: 1.5vw;
 }
 
-.headerImageContainer{
+.headerImageContainer {
   border: 5px solid blue;
   height: 6rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-left: 12.5rem;
+  margin-left: 20%; /* Adjust the margin according to your layout */
+  margin-right: 5%; /* Adjust the margin according to your layout */
+  box-sizing: border-box;
+  width: 40vw; /* Adjust the width as needed */
 }
 
+.boxGreen,
+.boxYellow,
+.boxRed,
+.boxBlue,
+.boxNavy {
+  box-sizing: border-box;
+  flex-grow: 1; /* Allow boxes to grow equally */
+  aspect-ratio: 1 / 1; /* Maintain aspect ratio (square) */
+}
+
+/* Adjust the background colors as needed */
 .boxGreen {
-  width: 6.5rem;
-  height: 6rem;
   background-color: #25C389;
 }
 
 .boxYellow {
-  width: 6.5rem;
-  height: 6rem;
   background-color: #FFB901;
 }
 
 .boxRed {
-  width: 6.5rem;
-  height: 6rem;
   background-color: #DE6262;
 }
 
 .boxBlue {
-  width: 6.5rem;
-  height: 6rem;
   background-color: #1691BD;
 }
 
 .boxNavy {
-  width: 6.5rem;
-  height: 6rem;
   background-color: #166BA2;
 }
-
 .sectionOne{
   display:flex;
   flex-direction: column;
@@ -81,10 +99,52 @@
   background-color: lightgrey;
   width:100%;
   border:none;
-  margin:0.25vh;
+  margin:0vh;
 }
 
-.sectionOneList{
+.sectionOneButtons {
+  display: flex; /* Change to flex */
+  flex-direction: column; /* Stack the child divs vertically */
+  align-items: flex-start; /* Align child divs to the start */
+  box-sizing: border-box;
+  border: 5px solid red;
+  max-width: 100%;
+  height: auto;
+}
+
+.buttonOne, .buttonTwo, .buttonThree {
+  text-align: left;
+  margin-right: 20px; /* Add some bottom margin for spacing */
+  display: inline-block; /* Remove this line */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 1px;
+
+
+}
+
+/* Add this rule to adjust the background color width */
+.buttonOne {
+  background-color: rgb(235, 235, 235);
+  width: fit-content; /* Adjusts the width of the background to fit content */
+  border-left: 8px solid #166BA2;
+}
+
+.buttonTwo {
+  background-color: rgb(235, 235, 235);
+  width: fit-content; /* Adjusts the width of the background to fit content */
+  border-left: 8px solid #DE6262;
+
+}
+
+.buttonThree {
+  background-color: rgb(235, 235, 235);
+  width: fit-content; /* Adjusts the width of the background to fit content */
+  border-left: 8px solid #FFB901;
 
 }
 
@@ -202,7 +262,35 @@
   border: 5px solid blue;
 }
 
-@media screen and (max-width: 40em) { 
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .sectionOne, .sectionSix, .sectionSeven{
+    display: none;
+  }
+  .footerInfoCard-2, .footerInfoCard-4{
+    display:none;
+  }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .card-superspecial{
+    display:none;
+  }
+  .sectionOne{
+    display:flex;
+  }
+  .sectionSix, .sectionSeven{
+    display: grid;
+  }
+  .sectionSeven{
+    grid-template-columns: repeat(5, 1fr);
+    height:31.51px; /*REMOVE*/
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .sectionThree, .sectionFour, .sectionFooter, .sectionFive{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -224,6 +312,49 @@
   .headerSectionSix{
     grid-column: span 1;
   }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .sectionThree, .sectionFooter{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .headerSectionThree, .footerInfo{
+    grid-column: span 4;
+  }
+  
+  .sectionFour{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .headerSectionFour{
+    grid-column: span 3;
+  }
+  
+  .sectionFive{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .headerSectionFive{
+    grid-column: span 3;
+  }
+  
+  .sectionSix{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .headerSectionSix{
+    grid-column: span 2;
+  }
 
 }
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
 
