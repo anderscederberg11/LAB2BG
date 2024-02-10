@@ -1,3 +1,45 @@
+
+:root{
+  --calmblack: #16242f;
+  --calmblue: #19b2de;
+  --calmgreen: #25c389;
+  --calmyellow: #f8ba0d;
+  --calmred: #de6262;
+  --hrblue: #1bade6;
+  --calmdarkblue: #166ba2;
+  --textgrey: #494949;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  padding:0;
+  margin:0;
+}
+
+h2{
+  font-size: 1.4vw;
+}
+
+h4{
+  color: white;
+  font-size: 1vw;
+  margin:0;
+  margin-top: 1vw;
+}
+
+h5{
+  color: grey;
+  font-weight: lighter;
+  font-size: 0.9vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
+}
+
+p{
+  line-height: 1.2vw;
+  color: white;
+}
+
 .displayContainer{
   display:flex;
   flex-direction: column;
@@ -355,17 +397,13 @@ h2 {
   background-color: black;
 }
 
-.sectionFooter{
-
-}
-  
-.footerInfo{
-
-}
-
 .footerInfoCard{
   border: 5px solid blue;
 }
+
+
+
+
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -427,6 +465,44 @@ h2 {
     left: 30vw;
     top: 1.5vw;
   }
+  .footerInfoCard-3{
+    grid-row: auto auto auto;
+    grid-column: 20vw 20vw;
+  }
+  .footerInfoCard-3 img{
+    width:10vw;
+  }
+  .card-changeimg img{
+    content: url('/img/cooimg.png')
+  }
+  .footerInfoCard-1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerInfoCard-1 div, .footerInfoCard-1 p{
+    display:none;
+  }
+  .footerInfoCard-1 img{
+    width:40vw;
+  }
+  .footerInfo img{
+    width:25vw;
+    height:25vw;
+  }
+  p{
+    line-height: 2.3vw;
+    font-size: 2vw;
+  }
+  h6, h4{
+    font-size: 2.4vw;
+  }
+  h2{
+    font-size: 3vw;
+  }
+  h5{
+    font-size: 1.5vw;
+  }
 }
 
 /* Medium and up */
@@ -442,19 +518,30 @@ h2 {
   }
   .sectionSeven{
     grid-template-columns: repeat(5, 1fr);
-    height:31.51px; 
+    height:fit-content;  
   }
   .menuContainer {
     display: none;
+  }
+  .footerInfoCard-1 img{
+    grid-row:3/4;
+    width:15vw;
+  }
+  p{
+    font-size: 0.62vw;
   }
 }
 
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  .sectionThree, .sectionFour, .sectionFooter, .sectionFive{
+  .sectionThree, .sectionFour, .sectionFive{
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;  }
+  
+  .sectionFooter{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
   }
 
   .titleTwo {
@@ -481,20 +568,33 @@ h2 {
     color: gray;
   }
 
+  .sectionFour .card-special img{
+    content: url('/img/fourthimgspan.png')
+  }
+
   .sectionFive{
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
   }
   
   .sectionSix{
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
+    grid-template-rows: auto auto auto;  }
   
   .headerSectionSix{
     grid-column: span 1;
   }
   .menuContainer {
     display: none;
+  }
+  .colorbardiv{
+    grid-column: span 2;
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .colorbar{
+    width:63%;
+    height:2vw;
   }
 }
 
@@ -503,8 +603,7 @@ h2 {
 @media screen and (min-width: 64em) {
   .sectionThree, .sectionFooter{
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
+    grid-template-rows: auto auto;  }
   
   .headerSectionThree, .footerInfo{
     grid-column: span 4;
@@ -512,7 +611,7 @@ h2 {
   
   .sectionFour{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
   }
   
   .headerSectionFour{
@@ -521,7 +620,7 @@ h2 {
   
   .sectionFive{
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
   }
   
   .headerSectionFive{
@@ -530,7 +629,7 @@ h2 {
   
   .sectionSix{
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
   }
   
   .headerSectionSix{
@@ -538,6 +637,16 @@ h2 {
   }
   .menuContainer {
     display: none;
+  }
+  .colorbardiv{
+    grid-column: span 4;
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .colorbar{
+    width:33%;
+    height:1.5vw;
   }
 
 }
