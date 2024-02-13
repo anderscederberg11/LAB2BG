@@ -11,6 +11,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 
 h2{
@@ -235,7 +240,7 @@ p{
 .sectionOneImage {
   position: relative; 
   width: 70%;
-  height: 28.5vw;
+  height: 28.89vw;
   box-sizing: content-box;
 }
 
@@ -347,26 +352,26 @@ h2 {
 
 .cardOne {
   border: 2px solid #FFB901;
-  height: 5rem;
-  width: 5rem;
+  height: 7vw;
+  width: 7vw;
 }
 
 .cardTwo {
   border: 2px solid #25C389;
-  height: 5rem;
-  width: 5rem;
+  height: 7vw;
+  width: 7vw;
 }
 
 .cardThree {
   border: 2px solid #DE6262;
-  height: 5rem;
-  width: 5rem;
+  height: 7vw;
+  width: 7vw;
 }
 
 .cardFour {
   border: 2px solid #1691BD;
-  height: 5rem;
-  width: 5rem;
+  height: 7vw;
+  width: 7vw;
 }
 
 
@@ -400,6 +405,10 @@ h2 {
   grid-template-rows: auto auto auto auto auto auto auto;
 }
 
+.sectionFive img:hover{
+  content: url('/img/Blueimg.png')
+}
+
 .sectionSix{
   overflow:hidden;
 }
@@ -409,8 +418,7 @@ h2 {
 }
 
 .sectionSeven img{
-  max-width: 100%;
-  max-height: 100%;
+  width: 75%;
   display: block;
 }
 
@@ -424,6 +432,10 @@ h2 {
   padding-top:1vw;
   padding-bottom:1vw;
   height:6vw;
+}
+
+.sectionSeven .scirra {
+  width: 50%;
 }
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 
@@ -494,6 +506,26 @@ h2 {
     margin-top: 0.5vw;
     color: gray;
   }
+  .sectionThree .card{
+    display:grid;
+    grid-template-columns: auto auto;
+  }
+
+   .cardOne, .cardTwo, .cardThree, .cardFour{
+    grid-column: 1/2;
+    grid-row: span 2;
+  }
+
+  h3{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .paragraph{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
 
   .headerImageContainer {
     display: none;
@@ -531,10 +563,12 @@ h2 {
     width:25vw;
     height:25vw;
   }
-  p{
-    line-height: 2.3vw;
-    font-size: 2vw;
-  }
+ .paragraph {
+  text-align: left;
+  font-size: 1.5vw;
+  margin-top: 0vw;
+  margin-left: 2vw;
+ }
   h6, h4{
     font-size: 2.4vw;
   }
@@ -543,6 +577,12 @@ h2 {
   }
   h5{
     font-size: 1.5vw;
+  }
+  .card h3{
+    font-size: 1.5vw;
+    text-align: left;
+    margin-bottom: 0vw;
+    margin-left: 2vw;
   }
 }
 
@@ -1009,17 +1049,6 @@ h6{
   .colorbar{
     width:33%;
     height:1.5vw;
-  }
-
-  .colorbardiv{
-    grid-column: span 2;
-    display:flex;
-    justify-content: flex-end;
-  }
-
-  .colorbar{
-    width:63%;
-    height:2vw;
   }
   .headerContainer {
     position: relative;
