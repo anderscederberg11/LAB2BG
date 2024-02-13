@@ -143,6 +143,10 @@ p{
   grid-template-rows: auto auto auto auto auto auto auto;
 }
 
+.sectionFive img:hover{
+  content: url('/img/Blueimg.png')
+}
+
 .sectionSix{
   overflow:hidden;
 }
@@ -156,6 +160,7 @@ p{
   max-height: 100%;
   display: block;
 }
+
 
 .sectionSeven .card{
   display: flex;
